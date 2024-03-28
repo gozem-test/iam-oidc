@@ -1,27 +1,15 @@
-output "arn" {
-  value = aws_eks_cluster.cluster.arn
+output "provider_arn" {
+  value = aws_iam_openid_connect_provider.provider.arn
 }
 
-output "endpoint" {
-  value = aws_eks_cluster.cluster.endpoint
+output "provider_id" {
+  value = aws_iam_openid_connect_provider.provider.id
 }
 
-output "id" {
-  value = aws_eks_cluster.cluster.id
+output "provider_url" {
+  value = aws_iam_openid_connect_provider.provider.url
 }
 
-output "kubeconfig-certificate-authority-data" {
-  value = aws_eks_cluster.cluster.certificate_authority[0].data
-}
-
-output "name" {
-  value = aws_eks_cluster.cluster.name
-}
-
-output "oidc_tls_issuer" {
-  value = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
-}
-
-output "version" {
-  value = aws_eks_cluster.cluster.version
+output "role_arn" {
+  value = aws_iam_role.role.arn
 }
